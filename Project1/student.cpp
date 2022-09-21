@@ -7,11 +7,10 @@
 #include <cstdlib>
 #include <iostream>
 
-//using namespace std;
-
-
-
-
+/* do not use using namespeace std 
+ther is two string std::string and system::string 
+if std used the GUI system string well not work and front_end and back_end well contrabit
+*/
 int checname(std::string name) {
 
     int nameLength = name.length();
@@ -42,33 +41,6 @@ void save_data(int r_nu, std::string n, long long i , int ag, float gp) {
     myfile.close();
 }
 
-
- /*int DeleteWord(long long token) {
-
-    std::string token = std::to_string(token);
-    std::string line;
-    std::fstream fin;
-    std::fstream fout;
-    fin.open("example.csv", std::ios::in);
-    fout.open("new.txt", std::ios::out | std::ios::app);
-    
-
-    std::vector <std::string> lines;
-    while (std::getline(fin, line)) {
-        if (line.find(token) != std::string::npos) {
-            
-            fin << line << std::endl;
-            
-        }
-    }
-
-    fin.close();
-    fout.close();
-    remove("words.txt");
-    rename("new.txt", "words.txt");
-
-}
-*/
 
 
 int student::get_data(int r_nu, std::string n, long long i, int ag, float gp)
@@ -244,9 +216,6 @@ int student::delete_data(long long rollnum)
 
 int student::modify_data(int roll1, std::string sub, long long rollnum, int ag, float new_marks)
 {
-    
-
-        // File pointer
         std::fstream fin, fout;
 
         // Open an existing record
